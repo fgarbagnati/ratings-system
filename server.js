@@ -26,3 +26,16 @@ var port = 4711;
 app.listen( port, function() {
   console.log('Express server listening on port %d in %s mode', port, app.settings.env);
 });
+
+// Routes
+app.get( '/api', function( request, response ) {
+  response.send('Library API is running');
+});
+
+// Connect to database
+mongoose.connect( 'mongodb://localhost/library_database' );
+
+// Schema
+var Restaurant = new mongoose.Schema({
+
+})
