@@ -16,3 +16,5 @@ router.on('route:editRestaurant', function() {
 Backbone.history.start();
 
 // adding random comment to test if commits are working
+
+// adding another random comment
