@@ -37,5 +37,23 @@ mongoose.connect( 'mongodb://localhost/library_database' );
 
 // Schema
 var Restaurant = new mongoose.Schema({
+  name: String,
+  theme: String,
+  location: String,
+  rating: Number,
+  total_rates: Number
+});
 
-})
+// Models
+var RestaurantModel = mongoose.model( 'Restaurant', Restaurant );
+
+// Get a list of all restaurants
+app.get( '/api/restaurants', function( request, response ) {
+  return RestaurantModel.find( function( err, restaurants ) {
+    if( !err ) {
+      return response.send( restaurants );
+    } else {
+      return console.log( err );
+    }
+  });
+});
