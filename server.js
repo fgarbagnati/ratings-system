@@ -57,3 +57,29 @@ app.get( '/api/restaurants', function( request, response ) {
     }
   });
 });
+
+// insert a new book
+app.post('/api/restaurants', function( request, response ) {
+  var restaurant = new RestaurantModel({
+    name: request.body.name,
+    theme: request.body.theme,
+    location: request.body.location
+  });
+
+  return restaurant.save( function( err ) {
+    if ( !err ) {
+      console.log( 'created' );
+      return response.send( restaurant );
+    } else {
+      console.log( err );
+    }
+  });
+});
+
+// var Restaurant = new mongoose.Schema({
+//   name: String,
+//   theme: String,
+//   location: String,
+//   rating: Number,
+//   total_rates: Number
+// });
