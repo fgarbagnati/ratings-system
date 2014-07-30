@@ -3,7 +3,5 @@ var AddRestaurant = Backbone.View.extend({
   render: function() {
     var template = _.template($('#add-restaurant-template').html(), {});
     this.$el.html(template);
-      }
-    })
-  }
-});
+    }
+  });
