@@ -1,4 +1,6 @@
-var RestaurantsList = Backbone.View.extend({
+var app = app || {};
+
+app.AppView = Backbone.View.extend({
   el: '.page',
   render: function() {
     var that = this;
