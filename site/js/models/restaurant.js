@@ -12,9 +12,9 @@ var app = app || {};
 
 app.Restaurant = Backbone.Model.extend({
   defaults: {
-    name: '',
-    theme: '',
-    location: '',
+    // name: '',
+    // theme: '',
+    // location: '',
     rating: 0
   }
 })
