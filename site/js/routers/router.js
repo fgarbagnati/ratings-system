@@ -5,12 +5,14 @@ var Router = Backbone.Router.extend({
   }
 });
 
+var addRestaurant = new AddRestaurant();
+
 var router = new Router();
 router.on('route:home', function() {
   console.log('in index route');
 });
 router.on('route:editRestaurant', function() {
-  console.log('show user form');
+  addRestaurant.render();
 });
 
 Backbone.history.start();
