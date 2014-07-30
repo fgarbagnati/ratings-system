@@ -1,7 +1,7 @@
 var Router = Backbone.Router.extend({
   routes: {
     '':'home',
-    'new': 'editRestaurant'
+    'new': 'addRestaurant'
   }
 });
 
@@ -11,7 +11,7 @@ var router = new Router();
 router.on('route:home', function() {
   console.log('in index route');
 });
-router.on('route:editRestaurant', function() {
+router.on('route:addRestaurant', function() {
   addRestaurant.render();
 });
 
